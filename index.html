@@ -289,6 +289,9 @@
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
     </nav>
+    <div class="theme-switcher">
+        <button id="theme-switcher">Toggle Theme</button>
+    </div>
   </header>
 
   <section class="hero">
@@ -300,8 +303,44 @@
     <a href="Praveen_Kumar_Resume.pdf" download class="button">📄 Download Resume</a>
   </section>
 
+  <section id="weather-widget" class="card">
+    <!-- Weather content will be loaded here -->
+  </section>
+
+  <section id="news-feed" class="card">
+    <!-- News content will be loaded here -->
+  </section>
+
+  <section id="translator" class="card">
+    <h3>Text Translator</h3>
+    <form id="translator-form">
+        <textarea id="text-to-translate" placeholder="Enter text to translate..."></textarea>
+        <select id="target-language">
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+        </select>
+        <button type="submit" class="button">Translate</button>
+    </form>
+    <div id="translated-text"></div>
+  </section>
+
+  <div id="chatbot-toggler">Chat</div>
+  <div id="chatbot" class="card">
+      <div id="chatbot-header">
+          <h3>Chatbot</h3>
+      </div>
+      <div id="chatbot-messages"></div>
+      <form id="chatbot-form">
+          <input type="text" id="chatbot-input" placeholder="Ask something...">
+          <button type="submit" class="button">Send</button>
+      </form>
+  </div>
+
+  <div id="scroll-to-top">↑</div>
+
   <footer>
-    <p>&copy; 2025 Praveen Kumar. All Rights Reserved.</p>
+    <p>&copy; <span id="year"></span> Praveen Kumar. All Rights Reserved.</p>
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -332,6 +371,12 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/weather.js"></script>
+  <script src="js/news.js"></script>
+  <script src="js/translator.js"></script>
+  <script src="js/chatbot.js"></script>
   <script src="script-effects.js"></script>
   <a href="#" class="back-to-top">↑</a>
   <script>

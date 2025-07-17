@@ -1,0 +1,38 @@
+[
+    {
+        "title": "My First Blog Post",
+        "body": "This is the body of my first blog post. I'm excited to share my thoughts with the world!",
+        "author": "Praveen Kumar",
+        "date": "2024-01-01"
+    },
+    {
+        "title": "My Second Blog Post",
+        "body": "This is the body of my second blog post. I'm getting the hang of this!",
+        "author": "Praveen Kumar",
+        "date": "2024-01-02"
+    },
+    {
+        "title": "My Third Blog Post",
+        "body": "This is the body of my third blog post. I'm on a roll!",
+        "author": "Praveen Kumar",
+        "date": "2024-01-03"
+    },
+    {
+        "title": "My Fourth Blog Post",
+        "body": "This is the body of my fourth blog post. I'm running out of things to say.",
+        "author": "Praveen Kumar",
+        "date": "2024-01-04"
+    },
+    {
+        "title": "My Fifth Blog Post",
+        "body": "This is the body of my fifth blog post. I'm just kidding, I have plenty to say!",
+        "author": "Praveen Kumar",
+        "date": "2024-01-05"
+    },
+    {
+        "title": "My Sixth Blog Post",
+        "body": "This is the body of my sixth blog post. I'm going to start writing about more interesting things soon.",
+        "author": "Praveen Kumar",
+        "date": "2024-01-06"
+    }
+]
