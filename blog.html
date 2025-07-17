@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Praveen Kumar | Portfolio</title>
+  <title>Praveen Kumar | Blog</title>
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style-effects.css">
@@ -157,49 +157,34 @@
       width: 100%;
     }
 
-    .hero {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      height: 100vh;
-      padding: 20px;
-      background: linear-gradient(135deg, #1c1c1c, #2e003e);
-      color: #fff;
-      position: relative;
-      z-index: 1;
+    .blog-section {
+      padding: 100px 20px 50px;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
-    .hero h2 {
-      font-size: 2.5rem;
+    .blog-post {
+      background: var(--glass);
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .blog-post h2 {
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+    }
+
+    .blog-post p {
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    .blog-post a {
       color: var(--primary);
-      margin-bottom: 20px;
-      animation: fadeInDown 1s ease;
-    }
-
-    .hero p {
-      font-size: 1rem;
-      margin-bottom: 40px;
-      padding: 0 15px;
-      animation: fadeInUp 1.2s ease;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 10px 20px;
-      background: var(--primary);
-      color: #000;
-      border-radius: 25px;
       text-decoration: none;
       font-weight: bold;
-      transition: transform 0.3s ease;
-      margin: 10px;
-      font-size: 0.9rem;
-    }
-
-    .button:hover {
-      transform: scale(1.05);
     }
 
     footer {
@@ -261,7 +246,6 @@
   <div class="progress-bar" id="progress-bar"></div>
   <div class="cursor" id="cursor"></div>
 
-  <!-- Subtle Background Animation -->
   <div class="background-animation">
     <div class="circle" style="width: 100px; height: 100px; left: 10%; top: 90%;"></div>
     <div class="circle" style="width: 60px; height: 60px; left: 50%; top: 95%;"></div>
@@ -283,20 +267,29 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <div id="particles-js"></div>
-    <h2>Hello, I'm Praveen</h2>
-    <h2 class="typing"></h2>
-    <p>Business Development Executive | AI Enthusiast | MBA Candidate</p>
-    <a href="about.html" class="button">Explore My Work</a>
-    <a href="https://in.linkedin.com/in/praveen-kumar-b8b7a02a0" target="_blank" class="button">Visit My LinkedIn</a>
-    <a href="Praveen_Kumar_Resume.pdf" download class="button">📄 Download Resume</a>
+  <section class="blog-section">
+    <div class="blog-post" data-aos="fade-up">
+      <h2>The Rise of AI in Business Development</h2>
+      <p>Artificial Intelligence is no longer a buzzword; it's a transformative force in business development. From predictive analytics to personalized customer engagement, AI is reshaping how we approach sales and marketing. In this post, I'll explore some of the most exciting AI applications that are helping businesses grow.</p>
+      <a href="#">Read More</a>
+    </div>
+    <div class="blog-post" data-aos="fade-up" data-aos-delay="200">
+      <h2>Mastering CRM for a Customer-Centric Approach</h2>
+      <p>A robust Customer Relationship Management (CRM) system is the backbone of any successful business. It's not just about storing contact information; it's about understanding your customers and building lasting relationships. This article delves into advanced CRM strategies that can help you create a truly customer-centric organization.</p>
+      <a href="#">Read More</a>
+    </div>
+    <div class="blog-post" data-aos="fade-up" data-aos-delay="400">
+      <h2>The Art of Digital Marketing: Beyond the Hype</h2>
+      <p>Digital marketing is a constantly evolving landscape. What worked yesterday might not work today. In this post, I'll share my insights on how to create a sustainable digital marketing strategy that focuses on long-term growth and brand building, rather than chasing short-lived trends.</p>
+      <a href="#">Read More</a>
+    </div>
   </section>
 
   <footer>
     <p>&copy; 2025 Praveen Kumar. All Rights Reserved.</p>
   </footer>
 
+  <a href="#" class="back-to-top">↑</a>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
   <script>
@@ -323,15 +316,7 @@
       nav.classList.toggle("show");
     }
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="script-effects.js"></script>
-  <a href="#" class="back-to-top">↑</a>
-  <script>
-    particlesJS.load('particles-js', 'particles.json', function() {
-      console.log('callback - particles.js config loaded');
-    });
-  </script>
 </body>
 
 </html>

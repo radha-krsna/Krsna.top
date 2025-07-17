@@ -21,3 +21,56 @@ if (document.querySelector('.typing')) {
     loop: true
   });
 }
+
+// Page Transitions
+document.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll('a');
+
+  links.forEach(link => {
+    link.addEventListener('click', e => {
+      const href = link.getAttribute('href');
+
+      if (href && href.startsWith('#')) {
+        return;
+      }
+
+      e.preventDefault();
+      document.body.classList.add('fade-out');
+
+      setTimeout(() => {
+        window.location.href = href;
+      }, 500);
+    });
+  });
+});
+
+// Hero Scroll Animation
+window.addEventListener('scroll', () => {
+  const hero = document.querySelector('.hero');
+  if (hero) {
+    if (window.scrollY > 100) {
+      hero.classList.add('scrolled');
+    } else {
+      hero.classList.remove('scrolled');
+    }
+  }
+});
+
+// Back to top button
+const backToTopButton = document.querySelector(".back-to-top");
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 300) {
+    backToTopButton.classList.add("show");
+  } else {
+    backToTopButton.classList.remove("show");
+  }
+});
+
+backToTopButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
