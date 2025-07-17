@@ -1,4 +1,16 @@
-/* Floating Card */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Modern Card */
+.card {
+  background: var(--glass);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
 .card:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 12px 35px rgba(181, 126, 220, 0.4);
@@ -12,39 +24,50 @@ h3 {
   -webkit-text-fill-color: transparent;
 }
 
-/* Neon Glow Button */
+/* Professional Button Styling */
 .button {
-  background: transparent;
-  border: 2px solid var(--primary);
-  color: var(--primary);
+  display: inline-block;
   padding: 12px 24px;
-  border-radius: 30px;
-  transition: 0.3s ease;
+  border: 1px solid var(--primary);
+  border-radius: 25px;
+  color: var(--primary);
+  background: transparent;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
-.button::before {
+
+.button:before {
   content: '';
   position: absolute;
   top: 0;
-  left: -100%;
-  width: 200%;
+  left: 0;
+  width: 0;
   height: 100%;
   background: var(--primary);
+  transition: all 0.3s ease;
   z-index: -1;
-  transition: 0.4s ease;
 }
-.button:hover::before {
-  left: 0;
-}
+
 .button:hover {
-  color: #000;
+  color: var(--dark);
+}
+
+.button:hover:before {
+  width: 100%;
 }
 
 /* Page Transitions */
+body {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
 body.fade-out {
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
 }
 
 /* Hero Scroll Animation */
@@ -85,4 +108,23 @@ body.fade-out {
 .back-to-top.show {
   opacity: 1;
   visibility: visible;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--primary);
+  color: #000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
 }

@@ -74,3 +74,15 @@ backToTopButton.addEventListener("click", (e) => {
     behavior: "smooth",
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopButton = document.querySelector(".back-to-top");
+
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 300) {
+      backToTopButton.classList.add("show");
+    } else {
+      backToTopButton.classList.remove("show");
+    }
+  });
+});
