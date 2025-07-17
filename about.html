@@ -122,6 +122,68 @@
       color: #aaa;
     }
 
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: var(--primary);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+
+    .timeline-container {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+
+    .timeline-container.left {
+      left: 0;
+    }
+
+    .timeline-container.right {
+      left: 50%;
+    }
+
+    .timeline-container::after {
+      content: '\f0b1';
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -17px;
+      background-color: white;
+      border: 4px solid var(--primary);
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+      text-align: center;
+      line-height: 25px;
+      font-size: 15px;
+      color: var(--primary);
+    }
+
+    .timeline-container.right::after {
+      left: -16px;
+    }
+
+    .content {
+      padding: 20px 30px;
+      background-color: var(--glass);
+      position: relative;
+      border-radius: 6px;
+    }
+
     @media (max-width: 768px) {
       .menu-toggle {
         display: block;
@@ -147,6 +209,32 @@
 
       nav a {
         margin: 10px 0;
+      }
+
+      .timeline::after {
+        left: 31px;
+      }
+
+      .timeline-container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+
+      .timeline-container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+      }
+
+      .timeline-container.left::after,
+      .timeline-container.right::after {
+        left: 15px;
+      }
+
+      .timeline-container.right {
+        left: 0%;
       }
     }
   </style>
@@ -174,6 +262,27 @@
     <div class="card" data-aos="fade-up">
       <h2>About Me</h2>
       <p>I am a passionate and driven professional with a background in business development and a strong interest in technology, especially AI. I am currently pursuing an MBA to further enhance my business acumen and leadership skills. I am a quick learner, a team player, and I am always looking for new challenges and opportunities to grow.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-container left" data-aos="fade-right">
+        <div class="content">
+          <h2>2024 - Present</h2>
+          <p>MBA in Logistics & Supply Chain Management, Sharda University</p>
+        </div>
+      </div>
+      <div class="timeline-container right" data-aos="fade-left">
+        <div class="content">
+          <h2>Jan 2024 - Jun 2024</h2>
+          <p>Business Development Executive, Pearl Organisation</p>
+        </div>
+      </div>
+      <div class="timeline-container left" data-aos="fade-right">
+        <div class="content">
+          <h2>2021 - 2024</h2>
+          <p>BBA, Jigyasa University</p>
+        </div>
+      </div>
     </div>
 
     <div class="card" data-aos="fade-up">
